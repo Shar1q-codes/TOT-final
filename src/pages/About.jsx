@@ -1,5 +1,6 @@
 // src/pages/About.jsx
 import React from "react";
+import "./About.css";
 
 const About = () => {
   document.title = "About Us | Triumphs of Talent Healthcare Consultants";

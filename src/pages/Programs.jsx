@@ -1,12 +1,13 @@
 // src/pages/Programs.jsx
 import React from "react";
+import "./Programs.css";
 
 const stats = [
   { label: "99% Coding & Billing Accuracy", icon: "✅" },
   { label: "90% First-Pass Clean Claim Rate", icon: "📈" },
   { label: "70+ Medical Specialties Served", icon: "🏥" },
   { label: "24/7 Customer Support", icon: "📞" },
-  { label: "8+ Years of Industry Experience", icon: "⏳" },
+  { label: "Over 20 Years of Industry Experience", icon: "⏳" },
   { label: "Dedicated RCM Managers", icon: "👥" },
 ];
 

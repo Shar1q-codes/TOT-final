@@ -1,5 +1,6 @@
 // src/pages/Contact.jsx
 import React, { useState } from "react";
+import "./Contact.css";
 
 const Contact = () => {
   document.title = "Contact Us | Triumphs of Talent Healthcare Consultants";
