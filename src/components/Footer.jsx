@@ -37,16 +37,16 @@ const Footer = () => {
           <p>Email: info@triumphsoftalent.com</p>
           <p>Phone: +1 (800) 123-4567</p>
           <div className="footer__socials">
-            <a href="#" aria-label="LinkedIn">
+            <a href="no" aria-label="LinkedIn">
               LinkedIn
             </a>{" "}
             |
-            <a href="#" aria-label="Facebook">
+            <a href="no" aria-label="Facebook">
               {" "}
               Facebook
             </a>{" "}
             |
-            <a href="#" aria-label="Instagram">
+            <a href="no" aria-label="Instagram">
               {" "}
               Instagram
             </a>
