@@ -1,9 +1,17 @@
 /* src/components/Navbar.css */
 
+:root {
+  --primary: #008080;
+  --secondary: #4fb3bf;
+  --background: #f0f9f8;
+  --text-dark: #1a1a1a;
+  --hover: #005f5f;
+}
+
 .navbar {
-  background-color: #ffffff;
+  background-color: var(--background);
   padding: 16px 24px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #c8e0dc;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -21,7 +29,7 @@
 .navbar__logo a {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #007acc;
+  color: var(--primary);
   text-decoration: none;
 }
 
@@ -40,13 +48,13 @@
 
 .navbar__links a {
   text-decoration: none;
-  color: #1a1a1a;
+  color: var(--text-dark);
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .navbar__links a:hover {
-  color: #007acc;
+  color: var(--hover);
 }
 
 /* Hamburger */
@@ -55,7 +63,7 @@
   background: none;
   border: none;
   font-size: 2rem;
-  color: #007acc;
+  color: var(--primary);
   cursor: pointer;
 }
 
@@ -69,12 +77,12 @@
     top: 64px;
     right: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: var(--background);
     flex-direction: column;
     align-items: center;
     gap: 20px;
     padding: 20px 0;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #c8e0dc;
     z-index: 999;
   }
 

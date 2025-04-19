@@ -10,7 +10,7 @@
 
 /* Page Heading */
 .programs-page h1 {
-  color: #007acc;
+  color: #005b96;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -26,12 +26,17 @@
 
 .stat-card {
   background-color: #f4faff;
-  border-left: 4px solid #007acc;
+  border-left: 4px solid #00b8a9;
   padding: 20px;
   width: 260px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
 }
 
 .stat-card .icon {
@@ -45,51 +50,48 @@
   color: #333;
 }
 
-/* Specialties List */
-.specialties {
-  margin-top: 30px;
-}
-
-.specialties h2 {
-  color: #007acc;
-  margin-bottom: 20px;
+/* New Sections */
+.programs-section {
+  margin-top: 60px;
   text-align: center;
 }
 
-.specialties ul {
-  columns: 2;
-  padding-left: 0;
-  list-style: none;
-  gap: 20px;
-  column-gap: 40px;
+.programs-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #005b96;
 }
 
-.specialties li {
-  margin-bottom: 10px;
-  font-size: 1.05rem;
-  padding-left: 20px;
-  position: relative;
+.programs-image-wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.specialties li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #007acc;
+.programs-image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.programs-image-wrapper img:hover {
+  transform: scale(1.02);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .stat-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .stat-card {
     width: 90%;
   }
 
-  .specialties ul {
-    columns: 1;
+  .programs-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .programs-image-wrapper img {
+    height: auto;
   }
 }

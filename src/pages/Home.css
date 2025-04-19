@@ -109,24 +109,34 @@
 }
 
 .why-choose-us h2 {
-  color: #005b96;
+  color: var(--primary, #008080); /* healthcare palette */
   margin-bottom: 20px;
 }
 
 .why-choose-us ul {
   list-style: none;
   padding: 0;
-  display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .why-choose-us li {
   background: #ffffff;
-  border-left: 4px solid #00b8a9;
-  padding: 15px;
+  border-left: 4px solid var(--secondary, #4fb3bf);
+  padding: 15px 20px;
   border-radius: 6px;
   font-weight: 500;
+  flex: 1 1 280px;
+  max-width: 300px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+}
+
+.why-choose-us li:hover {
+  transform: translateY(-4px);
 }
 
 /* RESPONSIVE (Mobile & Tablet) */

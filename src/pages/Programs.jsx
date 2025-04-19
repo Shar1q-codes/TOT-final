@@ -1,74 +1,66 @@
 // src/pages/Programs.jsx
-import React from "react";
+import React, { useEffect } from "react";
 import "./Programs.css";
 
 const stats = [
-  { label: "99% Coding & Billing Accuracy", icon: "✅" },
-  { label: "90% First-Pass Clean Claim Rate", icon: "📈" },
-  { label: "70+ Medical Specialties Served", icon: "🏥" },
-  { label: "24/7 Customer Support", icon: "📞" },
-  { label: "Over 20 Years of Industry Experience", icon: "⏳" },
-  { label: "Dedicated RCM Managers", icon: "👥" },
-];
-
-const specialties = [
-  "Internal Medicine",
-  "Pathology",
-  "Gastroenterology",
-  "Radiology",
-  "Nephrology",
-  "Cardiology",
-  "Psychiatry",
-  "Oncology",
-  "Pediatrics",
-  "Ob/Gyn",
-  "Physical Therapy",
-  "Urology",
-  "Dermatology",
-  "Anesthesiology",
-  "Nursing Homes",
-  "Toxicology",
-  "Orthopedic",
-  "Ambulatory Surgery",
-  "Genetics",
-  "More...",
+  { icon: "👨‍⚕️", label: "50+ Specialists Served" },
+  { icon: "💼", label: "20+ Healthcare Organizations" },
+  { icon: "🌎", label: "Global Client Base" },
+  { icon: "⏱️", label: "24-48 Hour Turnaround Time" },
+  { icon: "📊", label: "98% Claim Approval Rate" },
+  { icon: "✅", label: "99% Client Satisfaction" },
 ];
 
 const Programs = () => {
-  document.title = "Our Expertise | Triumphs of Talent Healthcare Consultants";
-  document
-    .querySelector('meta[name="description"]')
-    ?.setAttribute(
-      "content",
-      "Explore our programs, specialties, and client success metrics. Learn how Triumphs of Talent supports healthcare providers with top-tier RCM solutions."
-    );
-  document
-    .querySelector('meta[name="keywords"]')
-    ?.setAttribute(
-      "content",
-      "Trainer of Trainers, RCM expertise, Medical Specialties, Testimonials, Healthcare Billing Programs"
-    );
+  useEffect(() => {
+    document.title = "Programs | Triumphs of Talent Healthcare Consultants";
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute(
+        "content",
+        "Discover our specialties, software tools, and workflow that streamline healthcare billing and consulting."
+      );
+    document
+      .querySelector('meta[name="keywords"]')
+      ?.setAttribute(
+        "content",
+        "TOT Healthcare Programs, Specialties, Billing Workflow, RCM Tools, EHR Software"
+      );
+  }, []);
 
   return (
     <div className="programs-page">
-      <h1>Our Expertise</h1>
+      <h1>Our Programs</h1>
 
-      <section className="stat-grid">
-        {stats.map((item, index) => (
+      <div className="stat-grid">
+        {stats.map((stat, index) => (
           <div className="stat-card" key={index}>
-            <div className="icon">{item.icon}</div>
-            <p>{item.label}</p>
+            <div className="icon">{stat.icon}</div>
+            <p>{stat.label}</p>
           </div>
         ))}
+      </div>
+
+      {/* New Sections Below */}
+      <section className="programs-section">
+        <h2>Our Expertise</h2>
+        <div className="programs-image-wrapper">
+          <img src="/images/1.png" alt="Our Expertise" />
+        </div>
       </section>
 
-      <section className="specialties">
-        <h2>Specialties We Serve</h2>
-        <ul>
-          {specialties.map((spec, index) => (
-            <li key={index}>✔ {spec}</li>
-          ))}
-        </ul>
+      <section className="programs-section">
+        <h2>Softwares We Use</h2>
+        <div className="programs-image-wrapper">
+          <img src="/images/2.png" alt="Softwares We Use" />
+        </div>
+      </section>
+
+      <section className="programs-section">
+        <h2>Our Workflow</h2>
+        <div className="programs-image-wrapper">
+          <img src="/images/3.png" alt="Our Workflow" />
+        </div>
       </section>
     </div>
   );

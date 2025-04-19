@@ -33,8 +33,9 @@ const About = () => {
       <section className="about-mission">
         <h2>Our Mission</h2>
         <p>
-          To empower healthcare providers by delivering seamless and efficient
-          RCM services that drive financial growth.
+          As a Medical Billing Company, We are on the Mission to smoothen the
+          Medical Billing Process for our Clients. Medfin Solution aids those
+          who Trust us for their MedicalBilling. We Always Value Customers.
         </p>
       </section>
 

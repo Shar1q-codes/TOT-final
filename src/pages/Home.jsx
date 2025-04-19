@@ -46,8 +46,8 @@ const Home = () => {
           ensuring compliance every step of the way.
         </p>
         <p>
-          Backed by 8+ years of experience, we are proud to support healthcare
-          organizations across the country with solutions that are as
+          Backed by over 20 years of experience, we are proud to support
+          healthcare organizations across the country with solutions that are as
           personalized as they are powerful.
         </p>
       </section>
@@ -73,6 +73,7 @@ const Home = () => {
         <h2>Why Choose Triumphs of Talent?</h2>
         <ul>
           <li>✅ 99% Claim Acceptance Rate</li>
+          <li>✅ Serving 70+ Medical Specialties</li>
           <li>✅ 24/7 Client Support</li>
           <li>✅ Dedicated Account Managers</li>
           <li>✅ HIPAA-Compliant Processes</li>
