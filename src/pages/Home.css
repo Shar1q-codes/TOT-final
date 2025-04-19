@@ -7,7 +7,7 @@
 
 /* HERO */
 .hero-section {
-  background: linear-gradient(to right, #007acc, #00b4d8);
+  background: linear-gradient(to right, #005b96, #00b8a9);
   color: white;
   padding: 80px 20px;
   text-align: center;
@@ -25,8 +25,8 @@
 }
 
 .cta-button {
-  background-color: #ffffff;
-  color: #007acc;
+  background-color: #00b8a9;
+  color: white;
   padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
@@ -35,7 +35,7 @@
 }
 
 .cta-button:hover {
-  background-color: #f0f0f0;
+  background-color: #00497c;
 }
 
 /* WELCOME */
@@ -47,7 +47,7 @@
 }
 
 .welcome-section h2 {
-  color: #007acc;
+  color: #005b96;
   margin-bottom: 20px;
 }
 
@@ -59,13 +59,13 @@
 
 /* SERVICES */
 .quick-services {
-  background-color: #f4f9fb;
+  background-color: #f9f9f9;
   padding: 60px 20px;
   text-align: center;
 }
 
 .quick-services h2 {
-  color: #007acc;
+  color: #005b96;
   margin-bottom: 20px;
 }
 
@@ -80,9 +80,9 @@
 }
 
 .quick-services li {
-  background: white;
-  padding: 12px 18px;
   border: 1px solid #ddd;
+  background-color: #ffffff;
+  padding: 12px 18px;
   border-radius: 6px;
   font-weight: 500;
   min-width: 250px;
@@ -109,7 +109,7 @@
 }
 
 .why-choose-us h2 {
-  color: #007acc;
+  color: #005b96;
   margin-bottom: 20px;
 }
 
@@ -122,8 +122,8 @@
 }
 
 .why-choose-us li {
-  background: #eef6fb;
-  border-left: 4px solid #007acc;
+  background: #ffffff;
+  border-left: 4px solid #00b8a9;
   padding: 15px;
   border-radius: 6px;
   font-weight: 500;

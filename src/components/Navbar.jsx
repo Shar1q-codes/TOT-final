@@ -1,20 +1,44 @@
 // src/components/Navbar.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
     <header className="navbar">
-      <div className="navbar__logo">
-        <Link to="/">Triumphs of Talent</Link>
+      <div className="navbar__container">
+        <div className="navbar__logo">
+          <Link to="/">Triumphs of Talent</Link>
+        </div>
+
+        <div className="navbar__menu">
+          <div className={`navbar__links ${isOpen ? "active" : ""}`}>
+            <Link to="/" onClick={() => setIsOpen(false)}>
+              Home
+            </Link>
+            <Link to="/about" onClick={() => setIsOpen(false)}>
+              About Us
+            </Link>
+            <Link to="/services" onClick={() => setIsOpen(false)}>
+              Services
+            </Link>
+            <Link to="/programs" onClick={() => setIsOpen(false)}>
+              Programs
+            </Link>
+            <Link to="/contact" onClick={() => setIsOpen(false)}>
+              Contact
+            </Link>
+          </div>
+
+          <button className="navbar__toggle" onClick={toggleMenu}>
+            {isOpen ? "✖" : "☰"}
+          </button>
+        </div>
       </div>
-      <nav className="navbar__links">
-        <Link to="/">Home</Link>
-        <Link to="/about">About Us</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/programs">Programs</Link>
-        <Link to="/contact">Contact</Link>
-      </nav>
     </header>
   );
 };

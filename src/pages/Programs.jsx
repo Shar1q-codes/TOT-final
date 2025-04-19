@@ -35,8 +35,7 @@ const specialties = [
 ];
 
 const Programs = () => {
-  document.title =
-    "Our Programs & Expertise | Triumphs of Talent Healthcare Consultants";
+  document.title = "Our Expertise | Triumphs of Talent Healthcare Consultants";
   document
     .querySelector('meta[name="description"]')
     ?.setAttribute(
@@ -52,7 +51,7 @@ const Programs = () => {
 
   return (
     <div className="programs-page">
-      <h1>Our Programs & Expertise</h1>
+      <h1>Our Expertise</h1>
 
       <section className="stat-grid">
         {stats.map((item, index) => (

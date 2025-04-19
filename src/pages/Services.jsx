@@ -1,9 +1,12 @@
 // src/pages/Services.jsx
 import React from "react";
 import "./Services.css";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const servicesData = [
   {
+    id: "snf",
     title: "SNF Billing",
     desc: "Specialized Skilled Nursing Facility (SNF) billing services designed to increase reimbursements while ensuring compliance.",
     bullets: [
@@ -20,22 +23,7 @@ const servicesData = [
     image: "snf.jpg",
   },
   {
-    title: "Hospital Billing",
-    desc: "Comprehensive hospital billing services, ensuring precise claims processing, reduced denials, and accelerated reimbursements.",
-    bullets: [
-      "Patient registration and insurance verification",
-      "Accurate inpatient and outpatient coding",
-      "Claims submission and payment posting",
-      "AR follow-up and denial management",
-    ],
-    benefits: [
-      "Faster reimbursements",
-      "Improved revenue cycle efficiency",
-      "Compliance with payer guidelines",
-    ],
-    image: "hospital.jpg",
-  },
-  {
+    id: "physician",
     title: "Physician Billing",
     desc: "End-to-end physician billing services ensuring accurate coding, timely claims submission, and maximum reimbursements.",
     bullets: [
@@ -52,6 +40,24 @@ const servicesData = [
     image: "physician.jpg",
   },
   {
+    id: "hospital",
+    title: "Hospital Billing",
+    desc: "Comprehensive hospital billing services, ensuring precise claims processing, reduced denials, and accelerated reimbursements.",
+    bullets: [
+      "Patient registration and insurance verification",
+      "Accurate inpatient and outpatient coding",
+      "Claims submission and payment posting",
+      "AR follow-up and denial management",
+    ],
+    benefits: [
+      "Faster reimbursements",
+      "Improved revenue cycle efficiency",
+      "Compliance with payer guidelines",
+    ],
+    image: "hospital.jpg",
+  },
+  {
+    id: "rural",
     title: "Rural Health Billing",
     desc: "Expert Rural Health Billing services to maximize reimbursements and ensure compliance with payer regulations.",
     bullets: [
@@ -68,6 +74,7 @@ const servicesData = [
     image: "rural.jpg",
   },
   {
+    id: "telehealth",
     title: "Telehealth Billing",
     desc: "Ensure healthcare providers offering telehealth services get paid promptly and accurately.",
     bullets: [
@@ -84,6 +91,7 @@ const servicesData = [
     image: "telehealth.jpg",
   },
   {
+    id: "rcm",
     title: "RCM Services",
     desc: "End-to-end RCM solutions to help medical practices optimize performance and reduce burdens.",
     bullets: [
@@ -102,6 +110,19 @@ const servicesData = [
 ];
 
 const Services = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100); // delay ensures it scrolls after render
+      }
+    }
+  }, [location]);
+
   document.title = "Services | Triumphs of Talent Healthcare Consultants";
   document
     .querySelector('meta[name="description"]')
@@ -121,7 +142,7 @@ const Services = () => {
       <h1>Our Services</h1>
       <div className="services-grid">
         {servicesData.map((service, index) => (
-          <div className="service-card" key={index}>
+          <div className="service-card" key={index} id={service.id}>
             <div className="service-image">
               <img src={`/images/${service.image}`} alt={service.title} />
             </div>
