@@ -8,12 +8,14 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Programs from "./pages/Programs";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./ScrollToTop";
 // import other pages as we build them
 
 function App() {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
