@@ -2,14 +2,14 @@
 import React, { useEffect } from "react";
 import "./Programs.css";
 
-const stats = [
-  { icon: "👨‍⚕️", label: "50+ Specialists Served" },
-  { icon: "💼", label: "20+ Healthcare Organizations" },
-  { icon: "🌎", label: "Global Client Base" },
-  { icon: "⏱️", label: "24-48 Hour Turnaround Time" },
-  { icon: "📊", label: "98% Claim Approval Rate" },
-  { icon: "✅", label: "99% Client Satisfaction" },
-];
+// const stats = [
+//   { icon: "👨‍⚕️", label: "50+ Specialists Served" },
+//   { icon: "💼", label: "20+ Healthcare Organizations" },
+//   { icon: "🌎", label: "Global Client Base" },
+//   { icon: "⏱️", label: "24-48 Hour Turnaround Time" },
+//   { icon: "📊", label: "98% Claim Approval Rate" },
+//   { icon: "✅", label: "99% Client Satisfaction" },
+// ];
 
 const Programs = () => {
   useEffect(() => {
