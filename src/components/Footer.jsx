@@ -39,24 +39,25 @@ const Footer = () => {
           <h5>Our Services</h5>
           <ul>
             <li>
-              <a href="/services#snf">Patient Access Services</a>
+              <a href="/services#pas">Patient Access Services</a>
             </li>
             <li>
-              <a href="/services#physician">Medical Coding & Charge Capture</a>
+              <a href="/services#mccc">Medical Coding & Charge Capture</a>
             </li>
             <li>
-              <a href="/services#hospital">Claims Management</a>
+              <a href="/services#cm">Claims Management</a>
             </li>
             <li>
-              <a href="/services#rural">Denial Management & Appeals</a>
+              <a href="/services#dma">Denial Management & Appeals</a>
             </li>
             <li>
-              <a href="/services#telehealth">
-                Accounts Receivable (AR) Management
-              </a>
+              <a href="/services#arm">Accounts Receivable (AR) Management</a>
             </li>
             <li>
               <a href="/services#rcm">RCM Services</a>
+            </li>
+            <li>
+              <a href="/services#ccs">Credentialing & Contracting Services</a>
             </li>
           </ul>
         </div>

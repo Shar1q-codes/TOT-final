@@ -6,106 +6,83 @@ import { useLocation } from "react-router-dom";
 
 const servicesData = [
   {
-    id: "snf",
-    title: "SNF Billing",
-    desc: "Specialized Skilled Nursing Facility (SNF) billing services designed to increase reimbursements while ensuring compliance.",
+    id: "pas",
+    title: "Patient Access Services",
     bullets: [
-      "Accurate patient eligibility verification",
-      "Precise coding and claims submission",
-      "Denial management and appeals",
-      "Medicare, Medicaid, and private insurance billing",
+      "Insurance eligibility & benefits verification",
+      "Prior authorizations",
+      "Demographic entry",
+      "Patient pre-registration",
+      "Financial counseling",
     ],
-    benefits: [
-      "Improved cash flow",
-      "Reduced claim denials",
-      "Compliance with SNF billing regulations",
-    ],
-    image: "snf.jpg",
+    image: "pas.jpg",
   },
   {
-    id: "physician",
-    title: "Physician Billing",
-    desc: "End-to-end physician billing services ensuring accurate coding, timely claims submission, and maximum reimbursements.",
+    id: "mccc",
+    title: "Medical Coding & Charge Capture",
     bullets: [
-      "Patient eligibility verification",
-      "Charge entry and claims submission",
+      "CPT, ICD-10, and HCPCS coding",
+      "HCC coding and risk adjustment",
+      "Specialty-specific documentation reviews",
+      "Certified coding audits",
+      "Charge entry and claim scrubbing",
+    ],
+    image: "mccc.jpg",
+  },
+  {
+    id: "cm",
+    title: "Claims Management",
+    bullets: [
+      "Electronic & paper claims submission",
+      "Clearinghouse rejections resolution",
+      "Claim tracking and payer follow-up",
+      "Timely filing assurance",
+    ],
+    image: "cm.jpg",
+  },
+  {
+    id: "dma",
+    title: "Denial Management & Appeals",
+    bullets: [
+      "Denial analysis and root cause identification",
+      "Corrected claims and appeals submission",
+      "Payer correspondence management",
+      "Preventive denial strategy implementation",
+    ],
+    image: "dma.jpg",
+  },
+  {
+    id: "arm",
+    title: "Accounts Receivable (AR) Management",
+    bullets: [
+      "Insurance AR follow-up",
+      "Patient balance statements & collections",
+      "Secondary insurance billing",
       "Payment posting and reconciliation",
-      "AR follow-up and denial management",
     ],
-    benefits: [
-      "Reduced claim denials",
-      "Faster reimbursement cycles",
-      "Comprehensive compliance and reporting",
-    ],
-    image: "physician.jpg",
-  },
-  {
-    id: "hospital",
-    title: "Hospital Billing",
-    desc: "Comprehensive hospital billing services, ensuring precise claims processing, reduced denials, and accelerated reimbursements.",
-    bullets: [
-      "Patient registration and insurance verification",
-      "Accurate inpatient and outpatient coding",
-      "Claims submission and payment posting",
-      "AR follow-up and denial management",
-    ],
-    benefits: [
-      "Faster reimbursements",
-      "Improved revenue cycle efficiency",
-      "Compliance with payer guidelines",
-    ],
-    image: "hospital.jpg",
-  },
-  {
-    id: "rural",
-    title: "Rural Health Billing",
-    desc: "Expert Rural Health Billing services to maximize reimbursements and ensure compliance with payer regulations.",
-    bullets: [
-      "Eligibility verification and registration",
-      "CPT and HCPCS coding",
-      "Claims submission and payment posting",
-      "AR follow-up and denial management",
-    ],
-    benefits: [
-      "Faster reimbursements",
-      "Compliance with rural billing",
-      "Transparent reporting and analytics",
-    ],
-    image: "rural.jpg",
-  },
-  {
-    id: "telehealth",
-    title: "Telehealth Billing",
-    desc: "Ensure healthcare providers offering telehealth services get paid promptly and accurately.",
-    bullets: [
-      "Telehealth coverage eligibility verification",
-      "Accurate CPT and HCPCS coding",
-      "Claims submission and payment posting",
-      "AR follow-up and denial management",
-    ],
-    benefits: [
-      "Expertise in telehealth billing",
-      "Faster payments",
-      "Compliance with all guidelines",
-    ],
-    image: "telehealth.jpg",
+    image: "arm.jpg",
   },
   {
     id: "rcm",
-    title: "RCM Services",
-    desc: "End-to-end RCM solutions to help medical practices optimize performance and reduce burdens.",
+    title: "RCM Analytics & Compliance Reporting",
     bullets: [
-      "Registration and eligibility verification",
-      "Medical coding and charge capture",
-      "Claims submission and follow-up",
-      "Payment reconciliation and appeals",
-    ],
-    benefits: [
-      "Higher clean claim rates",
-      "Faster payments",
-      "Analytics and transparency",
+      "Customized dashboards & KPIs",
+      "Monthly performance reports",
+      "Audit support & compliance reports",
+      "Financial forecasting tools",
     ],
     image: "rcm.jpg",
+  },
+  {
+    id: "ccs",
+    title: "Credentialing & Contracting Services",
+    bullets: [
+      "Provider Enrollment & Credentialing",
+      "Re-Credentialing & Maintenance",
+      "Payer Contract Negotiation",
+      "CAQH Profile Management",
+    ],
+    image: "ccs.jpg",
   },
 ];
 
@@ -117,8 +94,16 @@ const Services = () => {
       const target = document.querySelector(location.hash);
       if (target) {
         setTimeout(() => {
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 100); // delay ensures it scrolls after render
+          const yOffset = -100; // shift up by 100px
+          const y =
+            target.getBoundingClientRect().top +
+            window.scrollY +
+            yOffset -
+            window.innerHeight / 2 +
+            target.offsetHeight / 2;
+
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }, 100);
       }
     }
   }, [location]);
@@ -140,6 +125,8 @@ const Services = () => {
   return (
     <div className="services-page">
       <h1>Our Services</h1>
+      <h2>Revenue Cycle Management Services</h2>
+      <h3>RCM Solutions Designed for the U.S. Healthcare System</h3>
       <div className="services-grid">
         {servicesData.map((service, index) => (
           <div className="service-card" key={index} id={service.id}>
@@ -148,20 +135,11 @@ const Services = () => {
             </div>
             <div className="service-content">
               <h2>{service.title}</h2>
-              <p>{service.desc}</p>
               <ul>
                 {service.bullets.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}
               </ul>
-              <div className="benefits">
-                <strong>Benefits:</strong>
-                <ul>
-                  {service.benefits.map((b, i) => (
-                    <li key={i}>✅ {b}</li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </div>
         ))}

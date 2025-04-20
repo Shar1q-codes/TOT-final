@@ -59,9 +59,21 @@ const Home = () => {
           <li>✔ Family Medicine</li>
           <li>✔ Internal Medicine</li>
           <li>✔ Cardiology</li>
-          <li>✔ Rural Health Clinic Billing</li>
-          <li>✔ Telehealth Billing</li>
-          <li>✔ Complete Revenue Cycle Management (RCM)</li>
+          <li>✔ Orthopedics</li>
+          <li>✔ Gastroenterology</li>
+          <li>✔ Neurology</li>
+          <li>✔ OB/GYN</li>
+          <li>✔ Pediatrics</li>
+          <li>✔ Urology</li>
+          <li>✔ Behavioral Health</li>
+          <li>✔ Chiropractic</li>
+          <li>✔ Podiatry</li>
+          <li>✔ Radiology</li>
+          <li>✔ Urgent Care</li>
+          <li>✔ Home Health</li>
+          <li>✔ Sleep Medicine</li>
+          <li>✔ Pain Management</li>
+          <li>✔ Oncology</li>
         </ul>
         <a href="/services" className="secondary-cta">
           Explore Our Full Service Offering →

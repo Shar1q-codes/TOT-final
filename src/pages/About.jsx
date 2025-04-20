@@ -1,6 +1,8 @@
 // src/pages/About.jsx
 import React from "react";
 import "./About.css";
+import aboutImage from "../assets/about-main.jpg"; // Add your image here
+import missionImage from "../assets/about-mission.jpg"; // Add another image here
 
 const About = () => {
   document.title = "About Us | Triumphs of Talent Healthcare Consultants";
@@ -20,6 +22,9 @@ const About = () => {
   return (
     <div className="about-page">
       <section className="about-intro">
+        <div className="about-image-container">
+          <img src={aboutImage} alt="Healthcare team" className="about-img" />
+        </div>
         <h1>About Us</h1>
         <h3>About TOT Healthcare Consultant</h3>
         <p>
@@ -39,6 +44,13 @@ const About = () => {
       </section>
 
       <section className="about-mission">
+        <div className="about-image-container">
+          <img
+            src={missionImage}
+            alt="Mission of the company"
+            className="about-img"
+          />
+        </div>
         <h2>Our Mission</h2>
         <p>
           To deliver efficient, transparent, and compliant RCM services that

@@ -1,5 +1,6 @@
-/* src/components/Navbar.css */
-
+/* ============================ */
+/*        Navbar Styling        */
+/* ============================ */
 :root {
   --primary: #008080;
   --secondary: #4fb3bf;
@@ -43,6 +44,7 @@
 .navbar__logo img {
   width: 6rem;
 }
+
 /* MENU SECTION - right-aligned */
 .navbar__menu {
   display: flex;
@@ -50,24 +52,83 @@
   gap: 30px;
 }
 
-/* Links */
 .navbar__links {
   display: flex;
   gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar__links a {
+.navbar__links li {
+  position: relative;
+  list-style: none;
+}
+
+.navbar__links a,
+.dropdown-toggle {
   text-decoration: none;
   color: var(--text-dark);
   font-weight: 500;
   transition: color 0.3s;
+  cursor: pointer;
 }
 
-.navbar__links a:hover {
+.navbar__links a:hover,
+.dropdown-toggle:hover {
   color: var(--hover);
 }
 
-/* Hamburger */
+/* ============================ */
+/*          Dropdown            */
+/* ============================ */
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  min-width: 260px;
+  z-index: 1000;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown li {
+  padding: 8px 20px;
+  white-space: nowrap;
+}
+
+.dropdown li a {
+  text-decoration: none;
+  color: #005b96;
+  font-weight: 500;
+  display: block;
+}
+
+.dropdown li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show dropdown on hover for desktop */
+.dropdown-parent:hover .dropdown {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ============================ */
+/*     Mobile Menu Handling     */
+/* ============================ */
 .navbar__toggle {
   display: none;
   background: none;
@@ -77,9 +138,7 @@
   cursor: pointer;
 }
 
-/* ========================= */
-/* Responsive - Mobile Menu */
-/* ========================= */
+/* Responsive */
 @media (max-width: 768px) {
   .navbar__links {
     display: none;
@@ -102,5 +161,19 @@
 
   .navbar__toggle {
     display: block;
+  }
+
+  .dropdown {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  .dropdown li {
+    padding: 10px 0;
   }
 }

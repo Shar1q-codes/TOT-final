@@ -17,23 +17,77 @@ const Navbar = () => {
         </div>
 
         <div className="navbar__menu">
-          <div className={`navbar__links ${isOpen ? "active" : ""}`}>
-            <Link to="/" onClick={() => setIsOpen(false)}>
-              Home
-            </Link>
-            <Link to="/about" onClick={() => setIsOpen(false)}>
-              About Us
-            </Link>
-            <Link to="/services" onClick={() => setIsOpen(false)}>
-              Services
-            </Link>
-            <Link to="/programs" onClick={() => setIsOpen(false)}>
-              Specialities
-            </Link>
-            <Link to="/contact" onClick={() => setIsOpen(false)}>
-              Contact
-            </Link>
-          </div>
+          <ul className={`navbar__links ${isOpen ? "active" : ""}`}>
+            <li>
+              <Link to="/" onClick={() => setIsOpen(false)}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={() => setIsOpen(false)}>
+                About Us
+              </Link>
+            </li>
+
+            {/* DROPDOWN */}
+            <li className="dropdown-parent">
+              <Link
+                to="/services"
+                className="dropdown-toggle"
+                onClick={() => setIsOpen(false)}
+              >
+                Services ▾
+              </Link>
+              <ul className="dropdown">
+                <li>
+                  <a href="/services#pas" onClick={() => setIsOpen(false)}>
+                    Patient Access Services
+                  </a>
+                </li>
+                <li>
+                  <a href="/services#mccc" onClick={() => setIsOpen(false)}>
+                    Medical Coding & Charge Capture
+                  </a>
+                </li>
+                <li>
+                  <a href="/services#cm" onClick={() => setIsOpen(false)}>
+                    Claims Management
+                  </a>
+                </li>
+                <li>
+                  <a href="/services#dma" onClick={() => setIsOpen(false)}>
+                    Denial Management & Appeals
+                  </a>
+                </li>
+                <li>
+                  <a href="/services#arm" onClick={() => setIsOpen(false)}>
+                    AR Management
+                  </a>
+                </li>
+                <li>
+                  <a href="/services#rcm" onClick={() => setIsOpen(false)}>
+                    RCM Analytics
+                  </a>
+                </li>
+                <li>
+                  <a href="/services#ccs" onClick={() => setIsOpen(false)}>
+                    Credentialing Services
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <Link to="/programs" onClick={() => setIsOpen(false)}>
+                Specialities
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={() => setIsOpen(false)}>
+                Contact
+              </Link>
+            </li>
+          </ul>
 
           <button className="navbar__toggle" onClick={toggleMenu}>
             {isOpen ? "✖" : "☰"}
