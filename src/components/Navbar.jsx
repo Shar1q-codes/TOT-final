@@ -12,7 +12,8 @@ const Navbar = () => {
     <header className="navbar">
       <div className="navbar__container">
         <div className="navbar__logo">
-          <Link to="/">Triumphs of Talent</Link>
+          <img src="/images/logo.png" alt="TOT HEALTHCARE CONSULTANTS LOGO" />
+          <Link to="/">TOT Healthcare Consultants</Link>
         </div>
 
         <div className="navbar__menu">
@@ -27,7 +28,7 @@ const Navbar = () => {
               Services
             </Link>
             <Link to="/programs" onClick={() => setIsOpen(false)}>
-              Programs
+              Specialities
             </Link>
             <Link to="/contact" onClick={() => setIsOpen(false)}>
               Contact

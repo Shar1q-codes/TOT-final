@@ -56,9 +56,9 @@ const Home = () => {
       <section className="quick-services">
         <h2>Precision-Driven Billing & RCM Services</h2>
         <ul>
-          <li>✔ Skilled Nursing Facility (SNF) Billing</li>
-          <li>✔ Physician Billing</li>
-          <li>✔ Hospital Billing</li>
+          <li>✔ Family Medicine</li>
+          <li>✔ Internal Medicine</li>
+          <li>✔ Cardiology</li>
           <li>✔ Rural Health Clinic Billing</li>
           <li>✔ Telehealth Billing</li>
           <li>✔ Complete Revenue Cycle Management (RCM)</li>
@@ -70,10 +70,10 @@ const Home = () => {
 
       {/* Why Choose Us (Optional Section) */}
       <section className="why-choose-us">
-        <h2>Why Choose Triumphs of Talent?</h2>
+        <h2>Why TOT Healthcare Consultants?</h2>
         <ul>
           <li>✅ 99% Claim Acceptance Rate</li>
-          <li>✅ Serving 70+ Medical Specialties</li>
+          <li>✅ 50% Cost Saving On Overhead Staff</li>
           <li>✅ 24/7 Client Support</li>
           <li>✅ Dedicated Account Managers</li>
           <li>✅ HIPAA-Compliant Processes</li>

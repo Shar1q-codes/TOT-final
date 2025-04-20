@@ -21,21 +21,36 @@ const About = () => {
     <div className="about-page">
       <section className="about-intro">
         <h1>About Us</h1>
+        <h3>About TOT Healthcare Consultant</h3>
         <p>
-          At Triumphs of Talent Healthcare Consultants, we specialize in
-          optimizing revenue cycle management (RCM) processes for healthcare
-          organizations. With a team of industry experts, cutting-edge
-          technology, and a commitment to accuracy, we help providers reduce
-          denials, boost cash flow, and maintain compliance.
+          Your Trusted Revenue Cycle Partner in the U.S. Healthcare Landscape
+          TOT Healthcare Consultant is a U.S.-based Revenue Cycle Management
+          company committed to helping healthcare providers optimize their
+          financial operations. With a team of certified professionals and
+          cutting-edge technology, we offer fully HIPAA-compliant RCM services
+          tailored to each provider’s specialty, volume, and goals.
+        </p>
+        <p>
+          Whether you're a solo practitioner or a large hospital network, our
+          solutions are scalable, cost-effective, and results-driven. We become
+          a seamless extension of your team — driving collections, reducing
+          denials, and enabling long-term financial health.
         </p>
       </section>
 
       <section className="about-mission">
         <h2>Our Mission</h2>
         <p>
-          As a Medical Billing Company, We are on the Mission to smoothen the
-          Medical Billing Process for our Clients. Medfin Solution aids those
-          who Trust us for their MedicalBilling. We Always Value Customers.
+          To deliver efficient, transparent, and compliant RCM services that
+          support better healthcare delivery in the U.S.
+        </p>
+      </section>
+
+      <section className="about-mission">
+        <h2>Our Vision</h2>
+        <p>
+          To be a leading U.S. RCM partner known for service excellence,
+          innovation, and client success.
         </p>
       </section>
 
@@ -45,22 +60,30 @@ const About = () => {
           <div className="value-card">
             <h3>Integrity</h3>
             <p>
-              Transparent and ethical practices in every aspect of our services.
+              We operate with honesty, transparency, and ethical responsibility.
             </p>
           </div>
           <div className="value-card">
-            <h3>Excellence</h3>
+            <h3>Compliance</h3>
             <p>
-              We deliver consistent, high-quality results that exceed
-              expectations.
+              We adhere strictly to healthcare regulations and industry
+              standards.
             </p>
           </div>
           <div className="value-card">
             <h3>Client-Centric</h3>
             <p>
-              We prioritize your success with personalized solutions tailored to
-              your needs.
+              Your goals are our priority; we tailor every solution to meet your
+              needs.
             </p>
+          </div>
+          <div className="value-card">
+            <h3>Accuracy</h3>
+            <p>We deliver precise, error-free solutions you can trust.</p>
+          </div>
+          <div className="value-card">
+            <h3>Accountability</h3>
+            <p>We take full ownership of our performance and results.</p>
           </div>
         </div>
       </section>

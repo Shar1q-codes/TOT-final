@@ -26,6 +26,13 @@
   position: relative;
 }
 
+.navbar__logo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 500px;
+}
+
 .navbar__logo a {
   font-size: 1.5rem;
   font-weight: bold;
@@ -33,6 +40,9 @@
   text-decoration: none;
 }
 
+.navbar__logo img {
+  width: 6rem;
+}
 /* MENU SECTION - right-aligned */
 .navbar__menu {
   display: flex;

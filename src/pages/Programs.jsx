@@ -30,17 +30,6 @@ const Programs = () => {
 
   return (
     <div className="programs-page">
-      <h1>Our Programs</h1>
-
-      <div className="stat-grid">
-        {stats.map((stat, index) => (
-          <div className="stat-card" key={index}>
-            <div className="icon">{stat.icon}</div>
-            <p>{stat.label}</p>
-          </div>
-        ))}
-      </div>
-
       {/* New Sections Below */}
       <section className="programs-section">
         <h2>Our Expertise</h2>
@@ -50,7 +39,7 @@ const Programs = () => {
       </section>
 
       <section className="programs-section">
-        <h2>Softwares We Use</h2>
+        <h2>Softwares We Are Experienced With</h2>
         <div className="programs-image-wrapper">
           <img src="/images/2.png" alt="Softwares We Use" />
         </div>

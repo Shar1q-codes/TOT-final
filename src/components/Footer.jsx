@@ -27,7 +27,7 @@ const Footer = () => {
               <a href="/services">Services</a>
             </li>
             <li>
-              <a href="/programs">Programs</a>
+              <a href="/programs">Specialities</a>
             </li>
             <li>
               <a href="/contact">Contact</a>
@@ -39,19 +39,21 @@ const Footer = () => {
           <h5>Our Services</h5>
           <ul>
             <li>
-              <a href="/services#snf">SNF Billing</a>
+              <a href="/services#snf">Patient Access Services</a>
             </li>
             <li>
-              <a href="/services#physician">Physician Billing</a>
+              <a href="/services#physician">Medical Coding & Charge Capture</a>
             </li>
             <li>
-              <a href="/services#hospital">Hospital Billing</a>
+              <a href="/services#hospital">Claims Management</a>
             </li>
             <li>
-              <a href="/services#rural">Rural Health Billing</a>
+              <a href="/services#rural">Denial Management & Appeals</a>
             </li>
             <li>
-              <a href="/services#telehealth">Telehealth Billing</a>
+              <a href="/services#telehealth">
+                Accounts Receivable (AR) Management
+              </a>
             </li>
             <li>
               <a href="/services#rcm">RCM Services</a>
@@ -82,9 +84,7 @@ const Footer = () => {
       </div>
 
       <div className="footer__bottom">
-        <p>
-          © {new Date().getFullYear()} Triumphs of Talent. All rights reserved.
-        </p>
+        <p>© 2015 Triumphs of Talent. All rights reserved.</p>
       </div>
     </footer>
   );
