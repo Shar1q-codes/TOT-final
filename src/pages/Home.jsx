@@ -64,7 +64,7 @@ const Home = () => {
           <li>✔ Complete Revenue Cycle Management (RCM)</li>
         </ul>
         <a href="/services" className="secondary-cta">
-          Explore Our Full Service Offering →
+          Explore Our Full Service Offering → hi
         </a>
       </section>
 
