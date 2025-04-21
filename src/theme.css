@@ -1,0 +1,7 @@
+:root {
+  --color-accent: #f0f4f8; /* or any contrasting light shade */
+  --color-bg: #ffffff;
+  --color-primary: #0066cc;
+  --color-secondary: #0099ff;
+  --color-text: #333;
+}

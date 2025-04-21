@@ -1,8 +1,7 @@
-// src/pages/About.jsx
 import React from "react";
 import "./About.css";
-import aboutImage from "../assets/about-main.jpg"; // Add your image here
-import missionImage from "../assets/about-mission.jpg"; // Add another image here
+import aboutImage from "../assets/about-main.jpg";
+import missionImage from "../assets/about-mission.jpg";
 
 const About = () => {
   document.title = "About Us | Triumphs of Talent Healthcare Consultants";
@@ -69,34 +68,33 @@ const About = () => {
       <section className="about-values">
         <h2>Our Core Values</h2>
         <div className="values-list">
-          <div className="value-card">
-            <h3>Integrity</h3>
-            <p>
-              We operate with honesty, transparency, and ethical responsibility.
-            </p>
-          </div>
-          <div className="value-card">
-            <h3>Compliance</h3>
-            <p>
-              We adhere strictly to healthcare regulations and industry
-              standards.
-            </p>
-          </div>
-          <div className="value-card">
-            <h3>Client-Centric</h3>
-            <p>
-              Your goals are our priority; we tailor every solution to meet your
-              needs.
-            </p>
-          </div>
-          <div className="value-card">
-            <h3>Accuracy</h3>
-            <p>We deliver precise, error-free solutions you can trust.</p>
-          </div>
-          <div className="value-card">
-            <h3>Accountability</h3>
-            <p>We take full ownership of our performance and results.</p>
-          </div>
+          {[
+            "Integrity",
+            "Compliance",
+            "Client-Centric",
+            "Accuracy",
+            "Accountability",
+          ].map((v, i) => (
+            <div className="value-card" key={i}>
+              <h3>{v}</h3>
+              <p>
+                {
+                  {
+                    Integrity:
+                      "We operate with honesty, transparency, and ethical responsibility.",
+                    Compliance:
+                      "We adhere strictly to healthcare regulations and industry standards.",
+                    "Client-Centric":
+                      "Your goals are our priority; we tailor every solution to meet your needs.",
+                    Accuracy:
+                      "We deliver precise, error-free solutions you can trust.",
+                    Accountability:
+                      "We take full ownership of our performance and results.",
+                  }[v]
+                }
+              </p>
+            </div>
+          ))}
         </div>
       </section>
     </div>

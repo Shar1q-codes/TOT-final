@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React from "react";
 import "./Home.css";
 
@@ -33,23 +32,39 @@ const Home = () => {
           </a>
         </div>
       </section>
+      <div className="divider divider--wave-top"></div>
 
       {/* Welcome Section */}
       <section className="welcome-section">
-        <h2>Welcome to Triumphs of Talent — Your Healthcare Revenue Partner</h2>
-        <p>
-          At Triumphs of Talent Healthcare Consultants, we combine industry
-          expertise, cutting-edge technology, and proven strategies to
-          streamline your revenue cycle from end to end. Whether you run a
-          hospital, clinic, telehealth service, or rural health center, our team
-          is dedicated to improving your reimbursements, reducing denials, and
-          ensuring compliance every step of the way.
-        </p>
-        <p>
-          Backed by over 20 years of experience, we are proud to support
-          healthcare organizations across the country with solutions that are as
-          personalized as they are powerful.
-        </p>
+        <div className="welcome-content">
+          <h2>
+            Welcome to Triumphs of Talent{" "}
+            <span>Your Healthcare Revenue Partner</span>
+          </h2>
+          <div className="welcome-grid">
+            <div className="welcome-card">
+              <h3>Streamlined Revenue Cycles</h3>
+              <p>
+                We bring efficiency, transparency, and technology together to
+                reduce claim denials and increase reimbursements.
+              </p>
+            </div>
+            <div className="welcome-card">
+              <h3>Personalized Strategies</h3>
+              <p>
+                Every provider is unique. We create tailored billing and RCM
+                plans aligned with your goals and specialties.
+              </p>
+            </div>
+            <div className="welcome-card">
+              <h3>20+ Years of Expertise</h3>
+              <p>
+                Backed by decades of hands-on experience in SNF, Telehealth, and
+                specialty billing for over 70 practices.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Services Section */}
@@ -80,7 +95,7 @@ const Home = () => {
         </a>
       </section>
 
-      {/* Why Choose Us (Optional Section) */}
+      {/* Why Choose Us */}
       <section className="why-choose-us">
         <h2>Why TOT Healthcare Consultants?</h2>
         <ul>

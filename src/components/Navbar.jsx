@@ -1,12 +1,19 @@
-// src/components/Navbar.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  // Close dropdown on desktop leave / mobile resize
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) setIsDropdownOpen(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <header className="navbar">
@@ -15,7 +22,6 @@ const Navbar = () => {
           <img src="/images/logo.png" alt="TOT HEALTHCARE CONSULTANTS LOGO" />
           <Link to="/">TOT Healthcare Consultants</Link>
         </div>
-
         <div className="navbar__menu">
           <ul className={`navbar__links ${isOpen ? "active" : ""}`}>
             <li>
@@ -28,17 +34,26 @@ const Navbar = () => {
                 About Us
               </Link>
             </li>
-
-            {/* DROPDOWN */}
-            <li className="dropdown-parent">
+            <li
+              className="dropdown-parent"
+              onMouseEnter={() =>
+                window.innerWidth > 768 && setIsDropdownOpen(true)
+              }
+              onMouseLeave={() =>
+                window.innerWidth > 768 && setIsDropdownOpen(false)
+              }
+            >
               <Link
                 to="/services"
                 className="dropdown-toggle"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  setIsDropdownOpen(!isDropdownOpen);
+                }}
               >
-                Services ▾
+                Services {isDropdownOpen ? "▾" : "▸"}
               </Link>
-              <ul className="dropdown">
+              <ul className={`dropdown ${isDropdownOpen ? "open" : ""}`}>
                 <li>
                   <a href="/services#pas" onClick={() => setIsOpen(false)}>
                     Patient Access Services
@@ -76,7 +91,6 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-
             <li>
               <Link to="/programs" onClick={() => setIsOpen(false)}>
                 Specialities
@@ -88,8 +102,7 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-
-          <button className="navbar__toggle" onClick={toggleMenu}>
+          <button className="navbar__toggle" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? "✖" : "☰"}
           </button>
         </div>
