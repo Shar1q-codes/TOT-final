@@ -1,20 +1,13 @@
-/* Import your theme variables at the top (if not global) */
+/* Home.css */
+/* Import theme variables */
 @import "../theme.css";
-:root {
-  --color-primary: #2b6777; /* Calm teal */
-  --color-secondary: #52ab98; /* Soft mint */
-  --color-accent: #c8d8e4; /* Light healthcare blue */
-  --color-text: #333;
-  --color-bg: #ffffff;
-  --color-heading: #205072;
-  --color-wave-light: linear-gradient(90deg, #c6f1f3, #dffbfa);
-}
+
 .home-page {
   font-family: "Segoe UI", sans-serif;
-  color: var(--color-text);
+  color: var(--text-color);
 }
 
-/* Hero */
+/* Hero Section */
 .hero-section {
   position: relative;
   height: 90vh;
@@ -33,12 +26,12 @@
 .hero-content h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
+  color: #fff;
   display: inline-block;
-  opacity: 0; /* Start with the h1 hidden */
+  opacity: 0;
   animation: fadeIn 1.5s ease-out forwards,
     highlightText 2s ease-in-out infinite;
-  text-shadow: 12px 12px 14px rgba(1, 11, 23, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .hero-content p {
   margin-bottom: 30px;
@@ -47,47 +40,42 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 .cta-button {
-  background: var(--color-secondary);
+  background: var(--accent-color);
   color: #fff;
   padding: 12px 28px;
-  border-radius: 6px;
+  border-radius: var(--border-radius);
   text-decoration: none;
   font-weight: 600;
   transition: background 0.3s;
 }
 .cta-button:hover {
-  background: var(--color-primary);
+  background: var(--primary-color);
 }
 
-/* Fade-in animation for h1 */
+/* Animations */
 @keyframes fadeIn {
-  0% {
+  from {
     opacity: 0;
-    transform: translateY(20px); /* Optional: makes it slide up slightly */
+    transform: translateY(20px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
-/* Animation to highlight the text */
 @keyframes highlightText {
-  0% {
-    color: #2a4d77;
+  0%,
+  100% {
+    color: #2d19a1;
     text-shadow: none;
   }
   50% {
-    color: #3cb371; /* Highlight color */
-    text-shadow: 0 0 5px rgba(60, 179, 113, 0.8); /* Glow effect */
-  }
-  100% {
-    color: #2a4d77;
-    text-shadow: none;
+    color: var(--accent-color);
+    text-shadow: 0 0 8px var(--accent-color);
   }
 }
 
-/* Divider Base */
+/* Divider Waves */
 .divider {
   height: 100px;
   width: 100%;
@@ -95,8 +83,6 @@
   position: relative;
   z-index: 1;
 }
-
-/* Wave Style for Top & Bottom */
 .divider--wave-top::before,
 .divider--wave-bottom::before {
   content: "";
@@ -105,9 +91,9 @@
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--color-wave-light);
-  animation: waveMove 10s linear infinite;
+  background: var(--wave-light);
   opacity: 0.85;
+  animation: waveMove 10s linear infinite;
   clip-path: polygon(
     0 100%,
     0 30%,
@@ -134,113 +120,97 @@
     100% 100%
   );
 }
-
-/* Position Fixes */
 .divider--wave-top::before {
   bottom: 0;
 }
-
 .divider--wave-bottom::before {
   top: 0;
-  transform: translateX(-50%) rotateX(180deg); /* Correctly flip the wave */
+  transform: translateX(-50%) rotateX(180deg);
 }
-
-/* Wave Animation */
 @keyframes waveMove {
-  0% {
+  0%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
   50% {
     transform: translateX(-48%) translateY(2px);
   }
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
 }
 
-/* Welcome */
+/* Welcome Section */
 .welcome-section {
   background: linear-gradient(135deg, #e0f7f4, #f2f9ff);
   padding: 4rem 2rem;
   text-align: center;
 }
-
 .welcome-content {
   max-width: 1100px;
   margin: 0 auto;
 }
-
 .welcome-content h2 {
   font-size: 2.4rem;
-  margin-bottom: 40px;
-  color: var(--color-primary);
-  position: relative;
+  margin-bottom: 2.5rem;
+  color: var(--primary-color);
   line-height: 1.3;
 }
-
 .welcome-content h2 span {
-  color: var(--color-secondary);
   display: block;
   font-size: 1.5rem;
-  margin-top: 10px;
+  margin-top: 0.6rem;
+  color: var(--secondary-color);
 }
-
 .welcome-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
-
 .welcome-card {
-  background: var(--color-bg);
-  border: 1px solid var(--color-primary);
+  background: var(--background-color);
+  border: 1px solid var(--primary-color);
   padding: 25px 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .welcome-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
-
 .welcome-card h3 {
-  color: var(--color-heading);
-  margin-bottom: 10px;
+  color: var(--header-color);
+  margin-bottom: 0.6rem;
   font-size: 1.25rem;
 }
-
 .welcome-card p {
-  color: var(--color-text);
-  font-size: 1rem;
+  color: var(--text-color);
+  font-size: var(--font-size-base);
   line-height: 1.6;
 }
 
 /* Quick Services */
 .quick-services {
-  background: var(--color-accent);
-  padding: 60px 20px;
+  background: var(--background-color);
+  padding: 3.75rem 1.25rem;
   text-align: center;
 }
 .quick-services h2 {
-  color: var(--color-primary);
-  margin-bottom: 20px;
+  color: var(--header-color);
+  margin-bottom: 1.25rem;
 }
 .quick-services ul {
   list-style: none;
   padding: 0;
-  margin: 0 auto 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+  margin-bottom: 1.25rem;
 }
 .quick-services li {
-  background: var(--color-bg);
-  border: 1px solid var(--color-primary);
-  padding: 12px 18px;
-  border-radius: 6px;
+  background: var(--background-color);
+  border: 1px solid var(--primary-color);
+  padding: 0.75rem 1.125rem;
+  border-radius: var(--border-radius);
   font-weight: 500;
   min-width: 250px;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -250,44 +220,43 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 .secondary-cta {
-  color: var(--color-primary);
+  display: inline-block;
+  color: var(--primary-color);
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s;
 }
 .secondary-cta:hover {
-  color: var(--color-secondary);
+  color: var(--secondary-color);
 }
 
 /* Why Choose Us */
 .why-choose-us {
-  padding: 60px 20px;
+  padding: 3.75rem 1.25rem;
   text-align: center;
 }
 .why-choose-us h2 {
-  color: var(--color-primary);
-  margin-bottom: 20px;
+  color: var(--primary-color);
+  margin-bottom: 1.25rem;
+  font-size: 2rem;
 }
 .why-choose-us ul {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 .why-choose-us li {
+  background: linear-gradient(145deg, #fff, #f9f9f9);
   padding: 15px 20px;
-  border-radius: 6px;
-  font-weight: 500;
+  border-left: 4px solid var(--secondary-color);
+  border-radius: var(--border-radius);
   flex: 1 1 280px;
   max-width: 300px;
-  box-sizing: border-box;
-  transition: transform 0.2s;
-  background: linear-gradient(145deg, #fff, #f9f9f9);
-  border-left: 4px solid var(--color-secondary);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
 }
 .why-choose-us li:hover {
   transform: translateY(-4px);
@@ -298,11 +267,11 @@
   .hero-content h1 {
     font-size: 2rem;
   }
-  .welcome-section {
+  .welcome-grid {
     grid-template-columns: 1fr;
-    text-align: center;
   }
-  .quick-services ul {
+  .quick-services ul,
+  .why-choose-us ul {
     flex-direction: column;
   }
   .quick-services li,

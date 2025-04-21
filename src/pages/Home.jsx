@@ -69,7 +69,7 @@ const Home = () => {
 
       {/* Services Section */}
       <section className="quick-services">
-        <h2>Precision-Driven Billing & RCM Services</h2>
+        <h2>Our Services</h2>
         <ul>
           <li>✔ Family Medicine</li>
           <li>✔ Internal Medicine</li>

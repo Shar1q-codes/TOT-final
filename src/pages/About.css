@@ -1,50 +1,40 @@
+/* About.css */
 @import "../theme.css";
 
 .about-page {
-  background-color: var(--color-bg-light);
-}
-.about-intro h1,
-.about-mission h2,
-.value-card h3 {
-  color: var(--color-primary);
-}
-.value-card {
-  background: var(--color-bg);
-  border-left: 4px solid var(--color-secondary);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.about-page {
-  padding: 60px 20px;
+  background-color: var(--footer-bg); /* Soft page background */
+  padding: var(--padding-lg);
   max-width: 1100px;
-  margin: auto;
-  font-family: "Segoe UI", sans-serif;
-  color: #1a1a1a;
+  margin: 0 auto;
+  font-family: var(--font-family);
+  color: var(--text-color);
   line-height: 1.6;
-  background-color: #f0f9f8;
 }
 
 .about-image-container {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: var(--margin-lg);
 }
+
 .about-img {
   width: 100%;
   max-width: 800px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 .about-intro h1,
-.about-intro h3,
-.about-mission h2 {
-  color: #008080;
+.about-mission h2,
+.value-card h3 {
+  color: var(--primary-color);
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: var(--margin-base);
 }
+
 .about-intro h1 {
   font-size: 2.5rem;
 }
+
 .about-intro h3 {
   font-weight: 600;
 }
@@ -52,43 +42,49 @@
 .about-intro p,
 .about-mission p {
   font-size: 1.1rem;
-  margin-bottom: 30px;
+  margin-bottom: var(--margin-lg);
   text-align: center;
+  color: var(--text-color);
 }
 
 .about-values {
-  margin-top: 40px;
+  margin-top: var(--margin-lg);
   text-align: center;
 }
+
 .about-values h2 {
-  margin-bottom: 30px;
+  color: var(--primary-color);
+  margin-bottom: var(--margin-lg);
 }
 
 .values-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: var(--margin-base);
   justify-content: center;
 }
+
 .value-card {
+  background: var(--background-color);
+  border-left: 4px solid var(--secondary-color);
+  box-shadow: var(--box-shadow);
+  padding: var(--padding-base);
+  border-radius: var(--border-radius);
+  transition: transform 0.3s;
   flex: 1 1 280px;
   max-width: 320px;
-  padding: 20px;
-  border-radius: 8px;
-  background: #fff;
-  border-left: 4px solid #4fb3bf;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s;
 }
+
 .value-card:hover {
   transform: translateY(-6px);
 }
+
 .value-card h3 {
-  color: #008080;
-  margin-bottom: 10px;
+  margin-bottom: var(--margin-base);
 }
+
 .value-card p {
-  color: #555;
+  color: var(--text-color);
   line-height: 1.4;
 }
 

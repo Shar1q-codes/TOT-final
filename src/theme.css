@@ -1,7 +1,32 @@
+/* theme.css - Centralized theme variables for easy styling and consistency */
+
 :root {
-  --color-accent: #f0f4f8; /* or any contrasting light shade */
-  --color-bg: #ffffff;
-  --color-primary: #0066cc;
-  --color-secondary: #0099ff;
-  --color-text: #333;
+  /* Colors */
+  --primary-color: #0077cc;
+  --secondary-color: #005fa3;
+  --accent-color: #4caf50;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --header-color: #1e3d59;
+  --footer-bg: #f4f4f4;
+  --card-bg: #f9f9f9;
+  --hover-bg: #e6f2ff;
+
+  /* Font */
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-base: 16px;
+  --font-size-lg: 20px;
+  --font-size-sm: 14px;
+
+  /* Spacing */
+  --padding-base: 1rem;
+  --padding-lg: 2rem;
+  --margin-base: 1rem;
+  --margin-lg: 2rem;
+
+  /* Border radius */
+  --border-radius: 8px;
+
+  /* Shadow */
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
