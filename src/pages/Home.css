@@ -38,6 +38,7 @@
   opacity: 0; /* Start with the h1 hidden */
   animation: fadeIn 1.5s ease-out forwards,
     highlightText 2s ease-in-out infinite;
+  text-shadow: 12px 12px 14px rgba(1, 11, 23, 0.3);
 }
 .hero-content p {
   margin-bottom: 30px;
