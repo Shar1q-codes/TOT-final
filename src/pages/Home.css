@@ -246,6 +246,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 .why-choose-us li {
@@ -274,9 +275,15 @@
   .why-choose-us ul {
     flex-direction: column;
   }
-  .quick-services li,
-  .why-choose-us li {
+  .quick-services li {
     width: 90%;
     max-width: none;
+    height: auto;
+    padding: 5px 10px;
+  }
+  .why-choose-us li {
+    align-items: center;
+    flex: 1 1 20px;
+    width: 50%;
   }
 }

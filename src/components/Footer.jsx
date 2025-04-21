@@ -67,7 +67,11 @@ const Footer = () => {
           <p>Email: info@triumphsoftalent.com</p>
           <p>Phone: +1 (800) 123-4567</p>
           <div className="footer__socials">
-            <a href="a" aria-label="LinkedIn">
+            <a
+              href="https://www.linkedin.com/company/tot-healthcare-consultants/?viewAsMember=true"
+              aria-label="LinkedIn"
+              target="blank"
+            >
               LinkedIn
             </a>{" "}
             |

@@ -2,7 +2,12 @@
 @import "../theme.css";
 
 .about-page {
-  background-color: var(--footer-bg); /* Soft page background */
+  background: linear-gradient(
+    135deg,
+    #f0faff 0%,
+    #e6f2ff 50%,
+    #ffffff 100%
+  ); /* Soft page background */
   padding: var(--padding-lg);
   max-width: 1100px;
   margin: 0 auto;
@@ -24,6 +29,7 @@
 }
 
 .about-intro h1,
+.about-intro h3,
 .about-mission h2,
 .value-card h3 {
   color: var(--primary-color);
@@ -93,5 +99,10 @@
   .values-list {
     flex-direction: column;
     align-items: center;
+  }
+
+  .value-card {
+    color: var(--text-color);
+    flex: none;
   }
 }
