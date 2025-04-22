@@ -36,10 +36,10 @@ const Contact = () => {
     setResponse("Sending...");
     emailjs
       .send(
-        "service_o7bjbff", // your Service ID
-        "template_g9gv7ev", // your Template ID
+        "service_g9ztbhb", // your Service ID
+        "template_8m0c46k", // your Template ID
         formData,
-        "V_QVMRoFd7U35lQzg" // your Public Key
+        "6H8zR9HCWU3TrYWfh" // your Public Key
       )
       .then(
         () => {
