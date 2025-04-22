@@ -1,6 +1,7 @@
 // src/components/Footer.jsx
 import React from "react";
 import "./Footer.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Footer = () => {
   return (
@@ -66,23 +67,40 @@ const Footer = () => {
           <h5>Contact</h5>
           <p>Email: info@triumphsoftalent.com</p>
           <p>Phone: +1 (800) 123-4567</p>
+          <p>
+            Address: <br /> U.S. Address: 701 Tillery Street Unit 12‑3061
+            Austin, Texas 78702, United States <br />
+            <br />
+            India Address: 4th Floor, Golden Chambers, Lakshmi Nagar Colony,
+            Shaikpet, Hyderabad, Telangana 500008
+          </p>
           <div className="footer__socials">
             <a
               href="https://www.linkedin.com/company/tot-healthcare-consultants/?viewAsMember=true"
               aria-label="LinkedIn"
-              target="blank"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="linkedin"
             >
-              LinkedIn
-            </a>{" "}
-            |
-            <a href="a" aria-label="Facebook">
-              {" "}
-              Facebook
-            </a>{" "}
-            |
-            <a href="a" aria-label="Instagram">
-              {" "}
-              Instagram
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://www.facebook.com" // replace with real link
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="facebook"
+            >
+              <i className="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://www.instagram.com" // replace with real link
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="instagram"
+            >
+              <i className="fab fa-instagram"></i>
             </a>
           </div>
         </div>

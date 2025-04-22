@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="navbar__container">
         <div className="navbar__logo">
           <img src="/images/logo.png" alt="TOT HEALTHCARE CONSULTANTS LOGO" />
-          <Link to="/">TOT Healthcare Consultants</Link>
+          <Link to="/">TOT Healthcare Solutions LLC</Link>
         </div>
         <div className="navbar__menu">
           <ul className={`navbar__links ${isOpen ? "active" : ""}`}>

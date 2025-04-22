@@ -1,5 +1,5 @@
 /* src/components/Footer.css */
-
+@import "../theme.css";
 .footer {
   background-color: #005b96;
   color: #f1f1f1;
@@ -70,18 +70,35 @@
 }
 
 .footer__socials {
-  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 15%;
 }
 
 .footer__socials a {
-  color: #d1eaff;
-  text-decoration: none;
-  margin-right: 12px;
-  font-weight: 500;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  transition: color 0.3s;
 }
 
 .footer__socials a:hover {
-  color: #00b8a9;
+  color: var(--secondary-color);
+}
+
+/* Brand colors */
+.footer__socials a.linkedin {
+  color: #0077b5;
+}
+
+.footer__socials a.facebook {
+  color: #1877f2;
+}
+
+.footer__socials a.instagram {
+  color: #e1306c;
 }
 
 .footer__bottom {
