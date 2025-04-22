@@ -63,7 +63,7 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
-      <h1>Schedule you Consultation!</h1>
+      <h1>Schedule yourself a Consultation!</h1>
 
       {/* Contact Form */}
       <form className="contact-form" onSubmit={handleSubmit}>
@@ -174,7 +174,7 @@ const Contact = () => {
         {/* First Location */}
         <div className="address-card">
           <div className="address-text">
-            <h2>Our Address (Austin)</h2>
+            <h2>Our U.S. Location</h2>
             <p>701 Tillery Street Unit 12‑3061</p>
             <p>Austin, Texas 78702, United States</p>
           </div>
@@ -189,12 +189,6 @@ const Contact = () => {
         </div>
         {/* Second Location */}
         <div className="address-card second">
-          <div className="address-text">
-            <h2>Our Address (Hyderabad)</h2>
-            <p>4th Floor, Golden Chambers,</p>
-            <p>Lakshmi Nagar Colony, Shaikpet,</p>
-            <p>Hyderabad, Telangana 500008</p>
-          </div>
           <div className="map-container">
             <iframe
               title="TOT Healthcare Location"
@@ -206,6 +200,12 @@ const Contact = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
+          </div>
+          <div className="address-text second-text">
+            <h2>Our India Location</h2>
+            <p>4th Floor, Golden Chambers,</p>
+            <p>Lakshmi Nagar Colony, Shaikpet,</p>
+            <p>Hyderabad, Telangana 500008</p>
           </div>
         </div>
       </section>

@@ -65,7 +65,7 @@ const Footer = () => {
 
         <div className="footer__contact">
           <h5>Contact</h5>
-          <p>Email: info@triumphsoftalent.com</p>
+          <p>Email: contact@triumphsoftalent.com</p>
           <p>Phone: +1 (800) 123-4567</p>
           <p>
             Address: <br /> U.S. Address: 701 Tillery Street Unit 12‑3061
