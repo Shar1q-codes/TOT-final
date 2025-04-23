@@ -1,10 +1,11 @@
 /* src/components/Footer.css */
 @import "../theme.css";
+
 .footer {
-  background-color: #005b96;
-  color: #f1f1f1;
+  background-color: var(--footer-bg); /* Brand deep teal */
+  color: var(--accent-color);
   padding: 60px 20px 30px;
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-family);
 }
 
 .footer__top {
@@ -34,6 +35,7 @@
 .footer__company p {
   font-size: 1rem;
   line-height: 1.6;
+  color: #f0f0f0;
 }
 
 .footer__links h5,
@@ -54,19 +56,19 @@
 }
 
 .footer__links ul li a {
-  color: #d1eaff;
+  color: var(--accent-color);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer__links ul li a:hover {
-  color: #00b8a9;
+  color: var(--secondary-color);
 }
 
 .footer__contact p {
   margin: 6px 0;
   font-size: 1rem;
-  color: #e6f7ff;
+  color: var(--accent-color);
 }
 
 .footer__socials {
@@ -74,7 +76,7 @@
   gap: 20px;
   justify-content: space-evenly;
   margin-top: 20px;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 15%;
 }
 
@@ -88,7 +90,7 @@
   color: var(--secondary-color);
 }
 
-/* Brand colors */
+/* Brand-specific icons */
 .footer__socials a.linkedin {
   color: #0077b5;
 }
@@ -106,4 +108,26 @@
   font-size: 0.9rem;
   color: #c0e0f5;
   margin-top: 30px;
+}
+
+.footer__group {
+  margin: 30px auto 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer__group img.group-logo {
+  height: 150px;
+  width: auto;
+
+  /* filter: brightness(0) invert(1); makes it white if needed */
+}
+
+.footer__group span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--accent-color);
 }

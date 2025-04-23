@@ -32,7 +32,7 @@ const Home = () => {
           </a>
         </div>
       </section>
-      <div className="divider divider--wave-top"></div>
+      {/* <div className="divider divider--wave-top"></div> */}
 
       {/* Welcome Section */}
       <section className="welcome-section">

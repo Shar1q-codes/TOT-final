@@ -1,16 +1,16 @@
-/* theme.css - Centralized theme variables for easy styling and consistency */
+/* theme.css - Centralized theme variables for TOT Healthcare brand styling */
 
 :root {
-  /* Colors */
-  --primary-color: #0077cc;
-  --secondary-color: #005fa3;
-  --accent-color: #4caf50;
+  /* Brand Colors based on new logo */
+  --primary-color: #0a5a64; /* Deep Teal (Logo Text) */
+  --secondary-color: #f7931e; /* Orange (Accent) */
+  --accent-color: #a5e5e8; /* Light Teal Background */
   --background-color: #ffffff;
-  --text-color: #333333;
-  --header-color: #1e3d59;
-  --footer-bg: #f4f4f4;
-  --card-bg: #f9f9f9;
-  --hover-bg: #e6f2ff;
+  --text-color: #1a1a1a;
+  --header-color: #08434a; /* Deeper Teal for contrast */
+  --footer-bg: #0a5a64;
+  --card-bg: #ffffff;
+  --hover-bg: #feead2; /* Pale Orange Tint for Hovers */
 
   /* Font */
   --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -27,6 +27,6 @@
   /* Border radius */
   --border-radius: 8px;
 
-  /* Shadow */
-  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* Box Shadow */
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }

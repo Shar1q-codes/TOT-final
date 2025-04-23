@@ -105,6 +105,15 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      {/* Group Companies Section */}
+      <div className="footer__group">
+        <img
+          src="/images/tot_logo.png"
+          alt="TOT Group Logo"
+          className="group-logo"
+        />
+        <span>Group of Companies</span>
+      </div>
 
       <div className="footer__bottom">
         <p>© 2015 Triumphs of Talent. All rights reserved.</p>

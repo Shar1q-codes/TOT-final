@@ -3,7 +3,7 @@
 @import "../theme.css";
 
 .home-page {
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-family);
   color: var(--text-color);
 }
 
@@ -40,7 +40,7 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 .cta-button {
-  background: var(--accent-color);
+  background: var(--secondary-color);
   color: #fff;
   padding: 12px 28px;
   border-radius: var(--border-radius);
@@ -49,7 +49,7 @@
   transition: background 0.3s;
 }
 .cta-button:hover {
-  background: var(--primary-color);
+  background: var(--header-color);
 }
 
 /* Animations */
@@ -66,11 +66,11 @@
 @keyframes highlightText {
   0%,
   100% {
-    color: #2d19a1;
+    color: var(--primary-color);
     text-shadow: none;
   }
   50% {
-    color: var(--accent-color);
+    color: var(--secondary-color);
     text-shadow: 0 0 8px var(--accent-color);
   }
 }
@@ -91,7 +91,7 @@
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--wave-light);
+  background: #ede1c9;
   opacity: 0.85;
   animation: waveMove 10s linear infinite;
   clip-path: polygon(
@@ -142,6 +142,7 @@
   background: linear-gradient(135deg, #e0f7f4, #f2f9ff);
   padding: 4rem 2rem;
   text-align: center;
+  margin-top: 60px;
 }
 .welcome-content {
   max-width: 1100px;
