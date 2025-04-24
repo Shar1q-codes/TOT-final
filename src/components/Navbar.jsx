@@ -1,5 +1,8 @@
+// src/components/Navbar.jsx
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+// ← import HashLink
+import { HashLink } from "react-router-hash-link";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -15,6 +18,11 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const handleDropdownClick = () => {
+    setIsOpen(false);
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <header className="navbar">
       <div className="navbar__container">
@@ -22,6 +30,7 @@ const Navbar = () => {
           <img src="/images/logo.png" alt="TOT HEALTHCARE CONSULTANTS LOGO" />
           <Link to="/">TOT Healthcare Solutions LLC</Link>
         </div>
+
         <div className="navbar__menu">
           <ul className={`navbar__links ${isOpen ? "active" : ""}`}>
             <li>
@@ -34,6 +43,7 @@ const Navbar = () => {
                 About Us
               </Link>
             </li>
+
             <li
               className="dropdown-parent"
               onMouseEnter={() =>
@@ -46,51 +56,79 @@ const Navbar = () => {
               <Link
                 to="/services"
                 className="dropdown-toggle"
-                onClick={() => {
-                  setIsOpen(false);
-                  setIsDropdownOpen(!isDropdownOpen);
-                }}
+                onClick={handleDropdownClick}
               >
                 Services {isDropdownOpen ? "▾" : "▸"}
               </Link>
+
+              {/* ---- only this <ul> changed: use HashLink instead of <a> ---- */}
               <ul className={`dropdown ${isDropdownOpen ? "open" : ""}`}>
                 <li>
-                  <a href="/services#pas" onClick={() => setIsOpen(false)}>
+                  <HashLink
+                    smooth
+                    to="/services#pas"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
                     Patient Access Services
-                  </a>
+                  </HashLink>
                 </li>
                 <li>
-                  <a href="/services#mccc" onClick={() => setIsOpen(false)}>
+                  <HashLink
+                    smooth
+                    to="/services#mccc"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
                     Medical Coding & Charge Capture
-                  </a>
+                  </HashLink>
                 </li>
                 <li>
-                  <a href="/services#cm" onClick={() => setIsOpen(false)}>
+                  <HashLink
+                    smooth
+                    to="/services#cm"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
                     Claims Management
-                  </a>
+                  </HashLink>
                 </li>
                 <li>
-                  <a href="/services#dma" onClick={() => setIsOpen(false)}>
+                  <HashLink
+                    smooth
+                    to="/services#dma"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
                     Denial Management & Appeals
-                  </a>
+                  </HashLink>
                 </li>
                 <li>
-                  <a href="/services#arm" onClick={() => setIsOpen(false)}>
+                  <HashLink
+                    smooth
+                    to="/services#arm"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
                     AR Management
-                  </a>
+                  </HashLink>
                 </li>
                 <li>
-                  <a href="/services#rcm" onClick={() => setIsOpen(false)}>
+                  <HashLink
+                    smooth
+                    to="/services#rcm"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
                     RCM Analytics
-                  </a>
+                  </HashLink>
                 </li>
                 <li>
-                  <a href="/services#ccs" onClick={() => setIsOpen(false)}>
+                  <HashLink
+                    smooth
+                    to="/services#ccs"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
                     Credentialing Services
-                  </a>
+                  </HashLink>
                 </li>
               </ul>
             </li>
+
             <li>
               <Link to="/programs" onClick={() => setIsOpen(false)}>
                 Specialities
@@ -102,6 +140,7 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
+
           <button className="navbar__toggle" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? "✖" : "☰"}
           </button>

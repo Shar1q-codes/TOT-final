@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   document.title = "Home | Triumphs of Talent Healthcare Consultants";
@@ -27,9 +28,9 @@ const Home = () => {
             cycle management — designed to help healthcare providers operate
             more efficiently, get paid faster, and stay focused on patient care.
           </p>
-          <a href="/contact" className="cta-button">
+          <Link to="/contact" className="cta-button">
             Request a Free Consultation
-          </a>
+          </Link>
         </div>
       </section>
       {/* <div className="divider divider--wave-top"></div> */}
@@ -97,7 +98,7 @@ const Home = () => {
 
       {/* Why Choose Us */}
       <section className="why-choose-us">
-        <h2>Why TOT Healthcare Consultants?</h2>
+        <h2>Why TOT Healthcare Solutions?</h2>
         <ul>
           <li>✅ 99% Claim Acceptance Rate</li>
           <li>✅ 50% Cost Saving On Overhead Staff</li>

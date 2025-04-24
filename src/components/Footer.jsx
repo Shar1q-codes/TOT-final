@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__top">
         <div className="footer__company">
-          <h4>Triumphs of Talent</h4>
+          <h4>TOT Healthcare Solutions</h4>
           <p>
             Delivering expert healthcare billing and revenue cycle management
             services with precision, transparency, and care.

@@ -25,10 +25,10 @@ const About = () => {
           <img src={aboutImage} alt="Healthcare team" className="about-img" />
         </div>
         <h1>About Us</h1>
-        <h3>About TOT Healthcare Consultant</h3>
+        <h3>About TOT Healthcare Solutions</h3>
         <p>
           Your Trusted Revenue Cycle Partner in the U.S. Healthcare Landscape
-          TOT Healthcare Consultant is a U.S.-based Revenue Cycle Management
+          TOT Healthcare Solutions is a U.S.-based Revenue Cycle Management
           company committed to helping healthcare providers optimize their
           financial operations. With a team of certified professionals and
           cutting-edge technology, we offer fully HIPAA-compliant RCM services
