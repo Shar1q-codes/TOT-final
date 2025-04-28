@@ -66,7 +66,7 @@ const Footer = () => {
         <div className="footer__contact">
           <h5>Contact</h5>
           <p>Email: contact@triumphsoftalent.com</p>
-          <p>Phone: +1 (800) 123-4567</p>
+          <p>Phone: +1 (512) 222-3586</p>
           <p>
             Address: <br /> U.S. Address: 701 Tillery Street Unit 12‑3061
             Austin, Texas 78702, United States <br />
