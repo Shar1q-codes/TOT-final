@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 import "./Contact.css";
 
 const Contact = () => {
-  document.title = "Contact Us | Triumphs of Talent Healthcare Consultants";
+  document.title = "Contact Us | Triumphs of Talent Healthcare Solutions";
   document
     .querySelector('meta[name="description"]')
     ?.setAttribute(

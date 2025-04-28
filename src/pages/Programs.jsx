@@ -13,7 +13,7 @@ import "./Programs.css";
 
 const Programs = () => {
   useEffect(() => {
-    document.title = "Programs | Triumphs of Talent Healthcare Consultants";
+    document.title = "Programs | Triumphs of Talent Healthcare Solutions";
     document
       .querySelector('meta[name="description"]')
       ?.setAttribute(

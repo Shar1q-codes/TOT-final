@@ -4,7 +4,7 @@ import aboutImage from "../assets/about-main.jpg";
 import missionImage from "../assets/about-mission.jpg";
 
 const About = () => {
-  document.title = "About Us | Triumphs of Talent Healthcare Consultants";
+  document.title = "About Us | Triumphs of Talent Healthcare olutions";
   document
     .querySelector('meta[name="description"]')
     ?.setAttribute(

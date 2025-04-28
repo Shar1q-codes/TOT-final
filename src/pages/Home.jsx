@@ -3,7 +3,7 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  document.title = "Home | Triumphs of Talent Healthcare Consultants";
+  document.title = "Home | Triumphs of Talent Healthcare Solutions";
   document
     .querySelector('meta[name="description"]')
     ?.setAttribute(
